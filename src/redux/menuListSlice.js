@@ -14,8 +14,11 @@ const menuListSlice = createSlice({
         flavorToSell.qtyInStock -= 1;
       }
     },
+    createFlavor: (state, action) => {
+      state.push(action.payload);
+    }
   }
 });
 export default menuListSlice.reducer;
-export const { sellPint } = menuListSlice.actions;
-export const menuListSelector = (state) => state.menuList 
+export const { sellPint, createFlavor } = menuListSlice.actions;
+export const menuListSelector = (state) => state.menuList;
