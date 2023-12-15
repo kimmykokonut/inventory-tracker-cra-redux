@@ -23,9 +23,16 @@ const menuListSlice = createSlice({
       .filter(flavor => flavor.id !== id)
       .concat(action.payload);
       return editedFlavorList;
+    },
+    setRestock: (state, action) => {
+      const { id, restockQty } = action.payload;
+      const flavorToRestock = state.find(flavor => flavor.id === id);
+      if (flavorToRestock) {
+        flavorToRestock.qtyInStock += restockQty;
+      }
     }
   }
 });
 export default menuListSlice.reducer;
-export const { sellPint, createFlavor, editFlavor } = menuListSlice.actions;
+export const { sellPint, createFlavor, editFlavor, setRestock } = menuListSlice.actions;
 export const menuListSelector = (state) => state.menuList;
