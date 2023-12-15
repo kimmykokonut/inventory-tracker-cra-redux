@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Praline's Own Made Ice Cream
+## Local Business Inventory Tracker, now with Redux!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### By Kim Robinson
 
-## Available Scripts
+## Component Diagram
+ ![Diagram of components](src/assets/diagram.drawio.svg)
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+* Html
+* Javascript, ES6
+* CSS
+* Bootstrap
+* vite
+* React
+* npm 
+* ESLint
+* uuid
+* Git
+* Redux toolkit
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## A code review for Epicodus to demonstrate a redux refactor of a React application, including testing. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###  This app will allow a user to:
+    -see a menu of available flavors 
+    -(each flavor will have at least 4 assigned properties )
+    -submit a form to add a pail (130 pts) to the inventory
+    -click on pail to see details
+    -see how many servings left in pail
+    -click button to sell 1 pint, which will decrement pail by 1 pint.
 
-### `npm test`
+## Setup/Installation Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Navigate to my github repository for this project (https://github.com/kimmykokonut/inventory-tracker-redux)
 
-### `npm run build`
+2. Click the 'Fork' button and  you will be taken to a new page where you can give your repository a new name and description. Choose "create fork".
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Click the 'code' button and copy the url for HTTPS.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. On your local computer, create a working directory for my files and name appropriately.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. On your terminal, type _$ git clone 'url'_ (using the url from step 3.)
 
-### `npm run eject`
+6. On your terminal, type _$ code ._ to open in VS Code.  If you do not have VS Code Editor, you may download here: https://code.visualstudio.com/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+7. Once in VS Code, open the terminal there and type 
+_$ npm install_ (to install the packages and dependencies). 
+You may also need to install bootstrap and uuid with these terminal commands: _$ npm install bootstrap_
+_$ npm install uuid_
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+8.  Now you can access my code. To see it rendered in a browser you can start a development server by typing 
+_$ npm run dev_ in the VS Code terminal and it should open a browser window.  If it doesn't automatically load, type o + ENTER on your keyboard and it will open the server on your default browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+_If this is too much and you just want to see what it looks like, go to my github pages for this project here:  https://kimmykokonut.github.io/inventory-tracker-redux_
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Optional:
+* To learn more about Vite, go here: https://vitejs.dev/
+* To learn more about npm, go here: https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/
 
-## Learn More
+## Known Bugs
+* App functional but room for improvement
+* I would like to have a message print if inventory gets to zero or disable the Buy pint button
+* It would be nice to make the header functional once I attain those skills
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+MIT License. See license.md for further information
