@@ -16,9 +16,16 @@ const menuListSlice = createSlice({
     },
     createFlavor: (state, action) => {
       state.push(action.payload);
+    },
+    editFlavor: (state, action) => {
+      const { id } = action.payload;
+      const editedFlavorList = state
+      .filter(flavor => flavor.id !== id)
+      .concat(action.payload);
+      return editedFlavorList;
     }
   }
 });
 export default menuListSlice.reducer;
-export const { sellPint, createFlavor } = menuListSlice.actions;
+export const { sellPint, createFlavor, editFlavor } = menuListSlice.actions;
 export const menuListSelector = (state) => state.menuList;

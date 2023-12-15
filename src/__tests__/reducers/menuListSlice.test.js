@@ -1,4 +1,4 @@
-import menuListSelectorReducer, { sellPint, createFlavor } from "../../redux/menuListSlice";
+import menuListSelectorReducer, { sellPint, createFlavor, editFlavor } from "../../redux/menuListSlice";
 
 describe('menuListSelectorReducer', () => {
   const initialState = [
@@ -55,6 +55,43 @@ describe('menuListSelectorReducer', () => {
       {
         name: 'Mint Chip',
         description: 'Mint ice cream with chocolate chunks',
+        imgSrc: 'mintchip',
+        alt: 'Mint chip flavor ice cream',
+        available: 'seasonal',
+        price: '5.00',
+        allergens: 'dairy',
+        qtyInStock: 130,
+        id: '2'
+      }])
+  })
+  it('should hanlde editFlavor action', () => {
+    const edit = {
+      name: 'Chocolate Chip',
+      description: 'Vanilla ice cream with chocolate chunks',
+      imgSrc: 'mintchip',
+      alt: 'Mint chip flavor ice cream',
+      available: 'seasonal',
+      price: '5.00',
+      allergens: 'dairy',
+      qtyInStock: 130,
+      id: '2'
+    }
+    const newMenuList = menuListSelectorReducer(initialState, editFlavor(edit));
+    expect(newMenuList).toEqual([
+      {
+        name: 'Reese\'s Nightmare',
+        description: 'A chocolate base with peanut butter ribbons and pieces of Reeses cups',
+        imgSrc: 'reeses',
+        alt: 'Chocolate reeses flavor ice cream',
+        available: 'classic',
+        price: '4.00',
+        allergens: 'peanuts',
+        qtyInStock: 130,
+        id: '1'
+      },
+      {
+        name: 'Chocolate Chip',
+        description: 'Vanilla ice cream with chocolate chunks',
         imgSrc: 'mintchip',
         alt: 'Mint chip flavor ice cream',
         available: 'seasonal',
