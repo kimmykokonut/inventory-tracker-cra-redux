@@ -6,6 +6,8 @@ import EditFlavorForm from "./EditFlavorForm";
 import RestockForm from "./RestockForm";
 import flavorArray from "./../flavorList";
 
+import { useSelector } from "react-redux";
+
 class IceCreamControl extends React.Component {
   constructor(props) {
     super(props);
