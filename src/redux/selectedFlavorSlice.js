@@ -11,4 +11,4 @@ const selectedFlavorSlice = createSlice({
 });
 export const { selectFlavor, clearSelectedFlavor } = selectedFlavorSlice.actions;
 export default selectedFlavorSlice.reducer;
-export const selectedFlavor = (state) => state.selectedFlavor 
+export const selectedFlavorSelector = (state) => state.selectedFlavor 
