@@ -4,7 +4,6 @@ import AddFlavorForm from "./AddFlavorForm";
 import FlavorDetail from "./FlavorDetail";
 import EditFlavorForm from "./EditFlavorForm";
 import RestockForm from "./RestockForm";
-//import flavorArray from "./../flavorList";
 
 import { useSelector } from "react-redux";
 
@@ -15,7 +14,6 @@ import { editingSelector, setEditFalse, setEditTrue } from "../redux/editingSlic
 import { restockSelector, setRestockFalse, setRestockTrue } from "../redux/restockSlice";
 
 import { useDispatch } from "react-redux";
-
 
 const IceCreamControl = () => {
   const dispatch = useDispatch();
@@ -55,33 +53,20 @@ const IceCreamControl = () => {
   }
   const handleCreateFlavor = (newFlavor) => {
     dispatch(createFlavor(newFlavor));
-    // const newMenuList = this.state.menuList.concat(newFlavor);
-    //this.setState({ menuList: newMenuList,
     dispatch(setFormFalse());
-    //formVisibleOnPage: false });
   }
   const handleChangingSelectFlavor = (id) => {
     const chosenFlavor = menuList[id];
-    console.log(menuList, typeof menuList); //
+    console.log(menuList, typeof menuList);
     dispatch(setFlavor(chosenFlavor));
-    //this.setState({ selectedFlavor: selectFlavor });
   }
   const handleEditClick = () => {
     dispatch(setEditTrue());
-    //this.setState({ editing: true });
   }
   const handleEditFlavor = (flavorToEdit) => {
     dispatch(editFlavor(flavorToEdit));
-    // const editedFlavorList = this.state.menuList
-    //   .filter(flavor => flavor.id !== this.state.selectedFlavor.id)
-    //   .concat(flavorToEdit);
     dispatch(setEditFalse());
     dispatch(clearSelectedFlavor());
-    // this.setState({
-    //   menuList: editedFlavorList,
-    //   editing: false,
-    //   selectedFlavor: null
-    // });
   }
   const handleRestockClick = () => {
     dispatch(setRestockTrue());

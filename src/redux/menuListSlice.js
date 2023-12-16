@@ -8,21 +8,13 @@ const menuListSlice = createSlice({
   initialState: startingFlavorArray,
   reducers: {
     sellPint: (state, action) => {
-      const { name, description, imgSrc, alt, available, allergens, id, price, qtyInStock } = action.payload;
-      if (state[id]) {
-        state[id] = {
-          ...state[id],
-        name,
-        description,
-        imgSrc,
-        alt,
-        available,
-        allergens,
-        price,
-        qtyInStock,
-        id
-        };
+      const flavorID = action.payload;
+      const flavorToSell = state[flavorID];
+
+      if (flavorToSell && flavorToSell.qtyInStock > 0) {
+        flavorToSell.qtyInStock -= 1;
       }
+
     },
     createFlavor: (state, action) => {
       const newFlavor = action.payload;
@@ -31,10 +23,6 @@ const menuListSlice = createSlice({
     editFlavor: (state, action) => {
       const editedFlavor = action.payload;
       state[editedFlavor.id] = editedFlavor;
-      // const editedFlavorList = state
-      // .filter(flavor => flavor.id !== id)
-      // .concat(action.payload);
-      // return editedFlavorList;
     },
     setRestock: (state, action) => {
       const { id, restockQty } = action.payload;
