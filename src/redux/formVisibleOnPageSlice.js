@@ -10,9 +10,12 @@ const formVisibleOnPageSlice = createSlice({
     setFormFalse: (state, action) => {
       return false;
     },
+    toggleForm: (state, action) => {
+      return !state;
+    }
   }
 });
 
 export default formVisibleOnPageSlice.reducer;
-export const { setFormFalse, setFormTrue } = formVisibleOnPageSlice.actions;
+export const { setFormFalse, setFormTrue, toggleForm } = formVisibleOnPageSlice.actions;
 export const formVisibleOnPageSelector = (state) => state.formVisibleOnPage
