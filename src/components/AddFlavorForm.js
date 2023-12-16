@@ -7,12 +7,13 @@ const AddFlavorForm = (props) => {
   function handleCreateFlavorFormSubmission(e) {
     e.preventDefault();
     props.onCreateFlavor({
-      name: e.target.name.value,
-      description: e.target.description.value,
-      imgSrc: e.target.imgSrc.value,
-      price: e.target.price.value,
-      allergens: e.target.allergens.value,
-      qtyInStock: parseInt(e.target.qtyInStock.value),
+      name: e.target.name.value || 'not provided',
+      description: e.target.description.value || 'not provided',
+      imgSrc: e.target.imgSrc.value || 'not provided',
+      price: e.target.price.value || 'not provided',
+      available: e.target.available.value || 'not provided',
+      allergens: e.target.allergens.value || 'not provided',
+      qtyInStock: parseInt(e.target.qtyInStock.value) || 0,
       id: v4()
     })
   }

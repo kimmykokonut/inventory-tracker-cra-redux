@@ -25,6 +25,11 @@ const ReusableForm = (props) => {
           name='imgSrc'
           placeholder="url" /> </label>
         <br />
+        <label>Availability: <input
+          type='text'
+          name='available'
+          placeholder="seasonal" /> </label>
+        <br />
         <label>Allergens: <input
           type='text'
           name='allergens'

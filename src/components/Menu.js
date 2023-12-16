@@ -14,7 +14,9 @@ const Menu = (props) => {
   }
   
   const currentInvObj = useSelector(menuListSelector);
+  console.log(typeof currentInvObj, 'currentinobj');
   const currentInvArray = Object.values(currentInvObj);
+  console.log(typeof currentInvArray, 'ciarray');
 
   return (
     <>

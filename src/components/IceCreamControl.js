@@ -62,9 +62,7 @@ const IceCreamControl = () => {
   }
   const handleChangingSelectFlavor = (id) => {
     const chosenFlavor = menuList[id];
-    console.log(menuList, typeof menuList); //object
-   //click 1st get id=1, click causes id2 to be visible...
-    //.filter(flavor => flavor.id === id)[0];
+    console.log(menuList, typeof menuList); //
     dispatch(setFlavor(chosenFlavor));
     //this.setState({ selectedFlavor: selectFlavor });
   }

@@ -9,7 +9,10 @@ const EditFlavorForm = (props) => {
     e.preventDefault();
     props.onEditTicket({
       name: e.target.name.value || flavor.name,
+      description: e.target.description.value || flavor.description,
       price: e.target.price.value || flavor.price,
+      imgSrc: e.target.imgSrc.value || flavor.imgSrc,
+      available: e.target.available.value || flavor.available,
       allergens: e.target.allergens.value || flavor.allergens,
       qtyInStock: parseInt(e.target.qtyInStock.value) || flavor.qtyInStock,
       id: flavor.id

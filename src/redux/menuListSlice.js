@@ -24,22 +24,17 @@ const menuListSlice = createSlice({
         };
       }
     },
-      //const { id } = action.payload;
-      // const flavorToSell = state.find(flavor => flavor.id === id);
-      // if (flavorToSell && flavorToSell.qtyInStock > 0) {
-      //   flavorToSell.qtyInStock -= 1;
-      // }
-      //return state.qtyInStock - 1;
-    
     createFlavor: (state, action) => {
-      state.push(action.payload);
+      const newFlavor = action.payload;
+      state[newFlavor.id] = newFlavor;
     },
     editFlavor: (state, action) => {
-      const { id } = action.payload;
-      const editedFlavorList = state
-      .filter(flavor => flavor.id !== id)
-      .concat(action.payload);
-      return editedFlavorList;
+      const editedFlavor = action.payload;
+      state[editedFlavor.id] = editedFlavor;
+      // const editedFlavorList = state
+      // .filter(flavor => flavor.id !== id)
+      // .concat(action.payload);
+      // return editedFlavorList;
     },
     setRestock: (state, action) => {
       const { id, restockQty } = action.payload;
