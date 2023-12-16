@@ -14,7 +14,6 @@ const menuListSlice = createSlice({
       if (flavorToSell && flavorToSell.qtyInStock > 0) {
         flavorToSell.qtyInStock -= 1;
       }
-
     },
     createFlavor: (state, action) => {
       const newFlavor = action.payload;

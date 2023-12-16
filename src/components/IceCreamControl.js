@@ -35,21 +35,8 @@ const IceCreamControl = () => {
     }
   }
   const handleBuyClick = (flavorID) => {
-    // const updatedMenuList = this.state.menuList.map((flavor) => {
-    //   if (flavor.id === flavorID && flavor.qtyInStock > 0) {
-    //     return {
-    //       ...flavor,
-    //       qtyInStock: flavor.qtyInStock - 1,
-    //     };
-    //   }
-    //   return flavor;
-    //});
     dispatch(sellPint(flavorID));
     dispatch(clearSelectedFlavor());
-    // this.setState({
-    //   menuList: updatedMenuList,
-    //   selectedFlavor: null
-    // });
   }
   const handleCreateFlavor = (newFlavor) => {
     dispatch(createFlavor(newFlavor));
@@ -70,7 +57,6 @@ const IceCreamControl = () => {
   }
   const handleRestockClick = () => {
     dispatch(setRestockTrue());
-    //this.setState({ restock: true });
   }
   const handleRestockFlavor = (updatedQty) => {
     dispatch(setRestock(updatedQty)); //might issue *130?
