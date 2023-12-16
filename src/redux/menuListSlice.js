@@ -8,12 +8,29 @@ const menuListSlice = createSlice({
   initialState: startingFlavorArray,
   reducers: {
     sellPint: (state, action) => {
-      const { id } = action.payload;
-      const flavorToSell = state.find(flavor => flavor.id === id);
-      if (flavorToSell && flavorToSell.qtyInStock > 0) {
-        flavorToSell.qtyInStock -= 1;
+      const { name, description, imgSrc, alt, available, allergens, id, price, qtyInStock } = action.payload;
+      if (state[id]) {
+        state[id] = {
+          ...state[id],
+        name,
+        description,
+        imgSrc,
+        alt,
+        available,
+        allergens,
+        price,
+        qtyInStock,
+        id
+        };
       }
     },
+      //const { id } = action.payload;
+      // const flavorToSell = state.find(flavor => flavor.id === id);
+      // if (flavorToSell && flavorToSell.qtyInStock > 0) {
+      //   flavorToSell.qtyInStock -= 1;
+      // }
+      //return state.qtyInStock - 1;
+    
     createFlavor: (state, action) => {
       state.push(action.payload);
     },
@@ -33,6 +50,7 @@ const menuListSlice = createSlice({
     }
   }
 });
+
 export default menuListSlice.reducer;
 export const { sellPint, createFlavor, editFlavor, setRestock } = menuListSlice.actions;
 export const menuListSelector = (state) => state.menuList;

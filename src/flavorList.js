@@ -2,8 +2,8 @@ import reeses from './assets/reeses.jpg';
 import oreo from "./assets/oreo.jpeg";
 import sorbet from "./assets/sorbet.jpeg";
 
-const flavorArray = [
-  {
+const flavorArray = {
+  1: {
     name: 'Reese\'s Nightmare',
     description: 'A chocolate base with peanut butter ribbons and pieces of Reeses cups',
     imgSrc: reeses,
@@ -14,7 +14,7 @@ const flavorArray = [
     qtyInStock: 130,
     id: '1'
   },
-  {
+  2: {
     name: 'Coffee Oreo',
     description: 'A coffee  base with pieces of Oreo cookies',
     imgSrc: oreo,
@@ -25,7 +25,7 @@ const flavorArray = [
     qtyInStock: 130,
     id: '2',
   },
-  {
+  3: {
     name: 'Raspberry Sorbet',
     description: 'Dairy-free, fresh raspberries will remind you of summer',
     imgSrc: sorbet,
@@ -36,5 +36,5 @@ const flavorArray = [
     qtyInStock: 130,
     id: '3'
   },
-];
+};
 export default flavorArray;

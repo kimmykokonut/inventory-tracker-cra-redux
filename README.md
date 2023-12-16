@@ -1,3 +1,8 @@
+kimnotes:
+add custom button works.
+fail: buy 1 pt (b/c menulist now an object)
+fail: click item detail (same issue)
+
 # Praline's Own Made Ice Cream
 ## Local Business Inventory Tracker, now with Redux!
 

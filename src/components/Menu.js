@@ -1,6 +1,9 @@
 import React from 'react';
 import Flavor from "./Flavor";
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { menuListSelector } from '../redux/menuListSlice';
+
 
 const Menu = (props) => {
   const itemStyle = {
@@ -9,13 +12,15 @@ const Menu = (props) => {
     flexWrap: 'wrap',
     justifyContent: 'center',
   }
-  let currentInv = props.menuList;
+  
+  const currentInvObj = useSelector(menuListSelector);
+  const currentInvArray = Object.values(currentInvObj);
 
   return (
     <>
       <h2>Current Menu</h2>
       <div style={itemStyle}>
-        {currentInv.map((flavor) =>
+        {currentInvArray.map((flavor) =>
           <Flavor
             whenFlavorClicked={props.onFlavorSelection}
             whenBuyClicked={props.onClickingBuy}
@@ -31,7 +36,7 @@ const Menu = (props) => {
   );
 }
 Menu.propTypes = {
-  menuList: PropTypes.array,
+  menuListSelector: PropTypes.object,
   onFlavorSelection: PropTypes.func,
   onClickingBuy: PropTypes.func
 };

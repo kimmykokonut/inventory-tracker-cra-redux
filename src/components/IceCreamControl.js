@@ -4,13 +4,13 @@ import AddFlavorForm from "./AddFlavorForm";
 import FlavorDetail from "./FlavorDetail";
 import EditFlavorForm from "./EditFlavorForm";
 import RestockForm from "./RestockForm";
-import flavorArray from "./../flavorList";
+//import flavorArray from "./../flavorList";
 
 import { useSelector } from "react-redux";
 
 import { formVisibleOnPageSelector, setFormFalse, toggleForm } from "../redux/formVisibleOnPageSlice";
 import { sellPint, createFlavor, editFlavor, menuListSelector, setRestock } from "../redux/menuListSlice";
-import { clearSelectedFlavor, selectedFlavorSelector } from "../redux/selectedFlavorSlice";
+import { clearSelectedFlavor, setFlavor, selectedFlavorSelector } from "../redux/selectedFlavorSlice";
 import { editingSelector, setEditFalse, setEditTrue } from "../redux/editingSlice";
 import { restockSelector, setRestockFalse, setRestockTrue } from "../redux/restockSlice";
 
@@ -46,7 +46,7 @@ const IceCreamControl = () => {
     //   }
     //   return flavor;
     //});
-    dispatch(sellPint());
+    dispatch(sellPint(flavorID));
     dispatch(clearSelectedFlavor());
     // this.setState({
     //   menuList: updatedMenuList,
@@ -61,8 +61,12 @@ const IceCreamControl = () => {
     //formVisibleOnPage: false });
   }
   const handleChangingSelectFlavor = (id) => {
-    const selectFlavor = this.state.menuList.filter(flavor => flavor.id === id)[0];
-    this.setState({ selectedFlavor: selectFlavor });
+    const chosenFlavor = menuList[id];
+    console.log(menuList, typeof menuList); //object
+   //click 1st get id=1, click causes id2 to be visible...
+    //.filter(flavor => flavor.id === id)[0];
+    dispatch(setFlavor(chosenFlavor));
+    //this.setState({ selectedFlavor: selectFlavor });
   }
   const handleEditClick = () => {
     dispatch(setEditTrue());
