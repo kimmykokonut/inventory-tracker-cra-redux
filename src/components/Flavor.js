@@ -24,8 +24,10 @@ const Flavor = (props) => {
           <p>Price: ${props.price} per pint</p>
           <p>In stock: {props.qtyInStock} pints</p>
         </div>
-        <button type="submit" onClick={() => props.whenBuyClicked(props.id)}>Buy 1 pint</button>
+        <div style={{ textAlign: 'center' }}>
+        <button className="bodyBtn" type="submit" onClick={() => props.whenBuyClicked(props.id)}>Buy 1 pint</button>
       </div>
+    </div >
     </>
   );
 }

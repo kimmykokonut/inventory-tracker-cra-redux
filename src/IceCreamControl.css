@@ -1,17 +1,17 @@
 body {
   font-family: 'Italiana',
     sans-serif;
+}
+
+h2 {
   font-family: 'Lora',
     serif;
 }
 
-button {
+.bodyBtn {
   --b: 3px;
-  /* border thickness */
   --s: .45em;
-  /* size of the corner */
   --color: #373B44;
-
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
@@ -21,22 +21,20 @@ button {
   outline: var(--b) solid #0000;
   outline-offset: .6em;
   font-size: 16px;
-
   border: 0;
-
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-button:hover,
-button:focus-visible {
+.bodyBtn:hover,
+.bodyBtn:focus-visible {
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
 }
 
-button:active {
+.bodyBtn:active {
   background: var(--color);
   color: #fff;
 }

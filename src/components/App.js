@@ -7,7 +7,6 @@ function App() {
   const styleBody = {
     backgroundImage: `url(${backgroundImg}`,
     backgroundSize: 'contain',
-    margin: '5%',
   }
   return (
     <React.Fragment>

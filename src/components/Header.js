@@ -6,20 +6,22 @@ function Header() {
   const styleHead = {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center'
   }
   const styleImg = {
     height: 'auto',
     width: 'auto',
     overflow: 'hidden',
+    marginTop: '3%',
+    textAlign: 'center'
   }
   return (
     <>
-    <div style={{textAlign: 'center'}}>
+    <div style={styleImg}>
       <img src={logo} alt="Praline's logo" />
       <div>
-        <img src={gelato} alt="Ice Cream in tubs" style={styleImg}></img>
+        <img src={gelato} alt="Ice Cream in tubs"></img>
       </div>
       </div>
       <hr />
