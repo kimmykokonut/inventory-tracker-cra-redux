@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 const FlavorDetail = (props) => {
   const styleDetail = {
     display: 'inline-block',
-    marginLeft: '33%',
+    width: '50%',
+    margin: '10px auto',
+    marginLeft: '25vw',
     textAlign: 'center',
     backgroundColor: 'salmon',
     padding: '10px',
