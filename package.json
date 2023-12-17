@@ -1,6 +1,7 @@
 {
   "name": "inventory-tracker-cra-redux",
   "version": "0.1.0",
+  "homepage": "https://kimmykokonut.github.io/inventory-tracker-cra-redux/",
   "repository": {
     "url": "git+https://github.com/kimmykokonut/inventory-tracker-cra-redux.git"
   },

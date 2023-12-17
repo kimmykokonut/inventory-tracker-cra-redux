@@ -10,7 +10,6 @@ const FlavorDetail = (props) => {
     textAlign: 'center',
     backgroundColor: 'salmon',
     padding: '10px',
-    margin: '10px',
     border: '3px solid black', borderRadius: '10px',
   }
   const imgStyle = {
