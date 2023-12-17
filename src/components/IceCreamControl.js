@@ -44,7 +44,6 @@ const IceCreamControl = () => {
   }
   const handleChangingSelectFlavor = (id) => {
     const chosenFlavor = menuList[id];
-    console.log(menuList, typeof menuList);
     dispatch(setFlavor(chosenFlavor));
   }
   const handleEditClick = () => {
@@ -59,26 +58,10 @@ const IceCreamControl = () => {
     dispatch(setRestockTrue());
   }
   const handleRestockFlavor = (updatedQty) => {
-    dispatch(setRestock(updatedQty)); //might issue *130?
-    // const updatedMenuList = this.state.menuList
-    //   .map((flavor) => {
-    //     if (flavor.id === this.state.selectedFlavor.id) {
-    //       return {
-    //         ...flavor,
-    //         qtyInStock: flavor.qtyInStock + updatedQty
-    //       };
-    //     }
-    //     return flavor;
-    //   });
+    dispatch(setRestock(updatedQty));
     dispatch(setEditFalse());
     dispatch(clearSelectedFlavor());
     dispatch(setRestockFalse());
-    // this.setState({
-    //   menuList: updatedMenuList,
-    //   editing: false,
-    //   selectedFlavor: null,
-    //   restock: false,
-    // });
   }
 
   let currentVisibleState = null;
@@ -117,6 +100,5 @@ const IceCreamControl = () => {
       <hr />
     </>
   );
-
 }
 export default IceCreamControl;

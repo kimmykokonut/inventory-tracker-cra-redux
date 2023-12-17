@@ -10,7 +10,6 @@ const menuListSlice = createSlice({
     sellPint: (state, action) => {
       const flavorID = action.payload;
       const flavorToSell = state[flavorID];
-
       if (flavorToSell && flavorToSell.qtyInStock > 0) {
         flavorToSell.qtyInStock -= 1;
       }
@@ -25,9 +24,8 @@ const menuListSlice = createSlice({
     },
     setRestock: (state, action) => {
       const { id, restockQty } = action.payload;
-      const flavorToRestock = state.find(flavor => flavor.id === id);
-      if (flavorToRestock) {
-        flavorToRestock.qtyInStock += restockQty;
+      if (state[id]) {
+        state[id].qtyInStock += restockQty;
       }
     }
   }

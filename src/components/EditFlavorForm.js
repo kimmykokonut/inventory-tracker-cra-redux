@@ -21,7 +21,6 @@ const EditFlavorForm = (props) => {
   return (
     <>
       <h3>Update details</h3>
-      <h5>You must fill in all forms, whether changed or not</h5>
       <ReusableForm
         formSubmissionHandler={handleEditFormSubmission}
         buttonText="Update info" />

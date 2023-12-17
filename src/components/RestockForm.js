@@ -6,7 +6,8 @@ const RestockForm = (props) => {
 
   function handleRestockFormSubmission(e) {
     e.preventDefault();
-    props.onRestockItem(130 * parseInt(e.target.restockQty.value));
+    const restockQty = 130 * parseInt(e.target.restockQty.value);
+    props.onRestockItem({ id: flavor.id, restockQty });
   }
   return (
     <>

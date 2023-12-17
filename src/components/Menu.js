@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { menuListSelector } from '../redux/menuListSlice';
 
-
 const Menu = (props) => {
   const itemStyle = {
     display: 'flex',
@@ -12,11 +11,8 @@ const Menu = (props) => {
     flexWrap: 'wrap',
     justifyContent: 'center',
   }
-  
   const currentInvObj = useSelector(menuListSelector);
-  console.log(typeof currentInvObj, 'currentinobj');
   const currentInvArray = Object.values(currentInvObj);
-  console.log(typeof currentInvArray, 'ciarray');
 
   return (
     <>
