@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5963325e.css",
+    "main.js": "/static/js/main.af6e7e5d.js",
+    "static/media/oreo.jpeg": "/static/media/oreo.70a8891e840ec883f17b.jpeg",
+    "static/media/spumono.jpeg": "/static/media/spumono.a21506699c636e42291c.jpeg",
+    "static/media/black-raspberry.jpeg": "/static/media/black-raspberry.d9b62c1d57706bc8a4dd.jpeg",
+    "static/media/lemon.jpeg": "/static/media/lemon.7896cf14040da5e51a86.jpeg",
+    "static/media/logo.png": "/static/media/logo.46668b5b3fc5a577b3d5.png",
+    "static/media/wafflebg.jpeg": "/static/media/wafflebg.a2dbc73f10ac9eb738f3.jpeg",
+    "static/media/grape.jpeg": "/static/media/grape.f873cf09900ad782959f.jpeg",
+    "static/media/reeses.jpg": "/static/media/reeses.3a0189e0e4a6820a4c5f.jpg",
+    "index.html": "/index.html",
+    "main.5963325e.css.map": "/static/css/main.5963325e.css.map",
+    "main.af6e7e5d.js.map": "/static/js/main.af6e7e5d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5963325e.css",
+    "static/js/main.af6e7e5d.js"
+  ]
+}
