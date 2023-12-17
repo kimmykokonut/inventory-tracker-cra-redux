@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 
 const Flavor = (props) => {
   const imgStyle = {
-    width: '100px',
-    height: 'auto'
+    display: 'block',
+    height: '150px',
+    width: 'auto',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   }
   const itemStyle = {
     border: '2px solid black',
     padding: '1%',
     margin: '1%',
+    backgroundColor: 'lightgrey',
   }
   return (
     <>

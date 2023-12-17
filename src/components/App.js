@@ -1,9 +1,12 @@
 import React from "react";
 import Header from "./Header";
 import IceCreamControl from "./IceCreamControl";
+import backgroundImg from "./../assets/wafflebg.jpeg";
 
 function App() {
   const styleBody = {
+    backgroundImage: `url(${backgroundImg}`,
+    backgroundSize: 'contain',
     margin: '5%',
   }
   return (

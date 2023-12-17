@@ -16,9 +16,11 @@ function Header() {
   }
   return (
     <>
+    <div style={{textAlign: 'center'}}>
       <img src={logo} alt="Praline's logo" />
       <div>
         <img src={gelato} alt="Ice Cream in tubs" style={styleImg}></img>
+      </div>
       </div>
       <hr />
       <div style={styleHead}>

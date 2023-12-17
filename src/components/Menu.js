@@ -16,7 +16,7 @@ const Menu = (props) => {
 
   return (
     <>
-      <h2>Current Menu</h2>
+      <h2 style={{textAlign: 'center'}}>Current Menu</h2>
       <div style={itemStyle}>
         {currentInvArray.map((flavor) =>
           <Flavor
